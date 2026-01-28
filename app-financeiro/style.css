@@ -1,0 +1,49 @@
+        /* Estilos Gerais (Reset e Fonte) */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding-top: 50px; }
+        
+        /* Card Principal */
+        .card { background: white; width: 100%; max-width: 450px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; }
+        
+        h2 { color: #333; text-align: center; margin-bottom: 20px; font-weight: 600; }
+        
+        /* Box do Saldo */
+        .saldo-box { background: #2c3e50; color: #fff; padding: 20px; text-align: center; border-radius: 8px; margin-bottom: 25px; }
+        .saldo-box span { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.8; }
+        .saldo-box h1 { font-size: 2.2rem; margin-top: 5px; }
+        
+        /* Filtros */
+        .filtros { display: flex; gap: 10px; margin-bottom: 20px; }
+        .filtros button { flex: 1; padding: 8px; background: #e0e0e0; border: none; cursor: pointer; border-radius: 50px; color: #555; font-weight: 600; transition: 0.3s; }
+        .filtros button:hover, .filtros button.ativo { background: #3498db; color: white; }
+        
+        /* Formulário */
+        .form-control { background: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #eee; }
+        input[type="text"], input[type="number"] { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; }
+        
+        /* Radio Buttons (Entrada/Saída) */
+        .tipo-transacao { display: flex; justify-content: space-around; margin: 10px 0; }
+        .tipo-transacao label { cursor: pointer; display: flex; align-items: center; gap: 5px; font-weight: 500; }
+        input[type="radio"] { accent-color: #27ae60; }
+        #radio-saida { accent-color: #c0392b; }
+
+        /* Botão Adicionar */
+        #btn-adicionar { width: 100%; padding: 12px; background: #27ae60; color: white; border: none; cursor: pointer; border-radius: 6px; font-size: 1rem; font-weight: bold; margin-top: 5px; transition: 0.2s; }
+        #btn-adicionar:hover { background: #219150; }
+
+        /* Lista de Transações */
+        ul { list-style: none; margin-top: 25px; max-height: 350px; overflow-y: auto; }
+        li { background: #fff; border-bottom: 1px solid #f1f1f1; padding: 15px 10px; display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; }
+        li:hover { background: #fafafa; }
+        
+        /* Barrinha colorida lateral */
+        li.positivo { border-left: 5px solid #27ae60; }
+        li.negativo { border-left: 5px solid #c0392b; }
+
+        .info-transacao { display: flex; flex-direction: column; }
+        .info-transacao span { font-weight: 500; color: #333; }
+        .info-transacao small { font-size: 0.8rem; color: #888; margin-top: 2px; }
+
+        .valores { display: flex; align-items: center; gap: 10px; }
+        .btn-delete { background: transparent; border: none; color: #ccc; cursor: pointer; font-size: 1.4rem; line-height: 1; padding: 0 5px; }
+        .btn-delete:hover { color: #e74c3c; }

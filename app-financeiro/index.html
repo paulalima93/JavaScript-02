@@ -1,11 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Minhas Finanças</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <div class="card">
+        <h2>💰 Minhas Finanças</h2>
+        
+        <div class="saldo-box">
+            <span>Saldo Atual</span>
+            <h1 id="texto-saldo">R$ 0,00</h1>
+        </div>
+
+        <div class="filtros">
+            <button onclick="filtrar('todos')" class="ativo">Todos</button>
+            <button onclick="filtrar('receitas')">Entradas</button>
+            <button onclick="filtrar('despesas')">Saídas</button>
+        </div>
+
+        <div class="form-control">
+            <input type="text" id="descricao" placeholder="Descrição (ex: Aluguel)">
+            <input type="number" id="valor" placeholder="Valor (ex: 1200.00)">
+            
+            <div class="tipo-transacao">
+                <label>
+                    <input type="radio" name="tipo" id="radio-entrada" checked> 
+                    📈 Entrada
+                </label>
+                <label>
+                    <input type="radio" name="tipo" id="radio-saida"> 
+                    📉 Saída
+                </label>
+            </div>
+
+            <button id="btn-adicionar">Adicionar Transação</button>
+        </div>
+
+        <ul id="lista-transacoes">
+        </ul>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
