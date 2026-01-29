@@ -70,7 +70,21 @@
 
        let acesa = false;
 
-    botao.addEventListener("click", )
+       function interrupitor(){
+        if(acesa){
+            document.body.style.backgroundColor = 'grey'
+            titulo.innerText = 'Apagada'
+            acesa = false;
+        } else {
+            document.body.style.backgroundColor = 'White'
+            titulo.innerText = 'Acesa'
+            acesa = true;
+        }
+       }
+
+
+    botao.addEventListener("click", interrupitor)
+
     </script>
 </body>
 
