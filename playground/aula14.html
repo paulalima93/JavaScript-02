@@ -60,11 +60,22 @@
 <body>
 
     <!-- HTML da aula -->
+    <input type="text" id="recado" placeholder="Digite seu recado...">
+    <button id="btn-enviar"> Enviar </button>
 
+    <div id="mural"></div> 
 
     <script>
         //CÓDIGO JS DO DESAFIO
+        const input = document.getElementById("recado");
+        const botao = document.getElementById("btn-enviar");
+        const mural = document.getElementById("mural");
 
+        botao.addEventListener("click", () => {
+            if(input.value === "") return;
+            mural.innerHTML += ` <p><b> Recado:</b> ${input.value} </p> `
+            input.value = ""
+        })
 
     </script>
 </body>
