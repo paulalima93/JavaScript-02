@@ -5,7 +5,7 @@
 // ----------------------------------------
 const input = document.getElementById("idade");
 // O .value SEMPRE devolve texto. "10" + "10" = "1010".
-// Precisamos converter: Number(input.value)
+// Precisamos converter: Number("input.value")
 
 // ----------------------------------------
 // 2. Radio Buttons e Checkboxes (.checked)

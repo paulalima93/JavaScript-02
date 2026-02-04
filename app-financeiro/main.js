@@ -15,9 +15,10 @@ function adicionarTransacao(){
     </li>
     `
     saldo.innerText = value;
+    
     inputDesc = "";
     inputValue = "";
-
+    
 }
 
 function teste(){
