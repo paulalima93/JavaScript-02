@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Área de Testes - Mini Desafios - 13</title>
+    <title>Área de Testes - Mini Desafios - 15</title>
     <style>
         body {
             font-family: sans-serif;
@@ -58,32 +58,12 @@
 </head>
 
 <body>
-
     <!-- HTML da aula -->
-    <h1 id="titulo"> Apagada </h1>
-    <button id="btn-ligar-desligar"> Ligar / Desligar </button>
+
 
     <script>
         //CÓDIGO JS DO DESAFIO
-       const titulo = document.getElementById("titulo");
-       const botao = document.getElementById("btn-ligar-desligar");
 
-       let acesa = false;
-
-       function interrupitor(){
-        if(acesa){
-            document.body.style.backgroundColor = 'grey'
-            titulo.innerText = 'Apagada'
-            acesa = false;
-        } else {
-            document.body.style.backgroundColor = 'White'
-            titulo.innerText = 'Acesa'
-            acesa = true;
-        }
-       }
-
-
-    botao.addEventListener("click", interrupitor)
 
     </script>
 </body>
