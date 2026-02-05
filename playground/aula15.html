@@ -59,13 +59,27 @@
 
 <body>
     <!-- HTML da aula -->
+     <label>
+        <input type="radio" name="darkMode" id="tema">
+        Mudar tema
+     </label>
 
-
+    <input type="radio" name="darkMode" id="tema2">
+    
     <script>
     //CÓDIGO JS DO DESAFIO
+        const radioTema = document.getElementById('tema');
 
+        radioTema.addEventListener('change', ()=>{
+            if(radioTema.checked){
+                document.body.classList.add('modo-escuro')
+            }else{
+                document.body.classList.remove('modo-escuro')
+            }
+        })
 
     </script>
+
 </body>
 
 </html>
