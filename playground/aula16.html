@@ -60,11 +60,34 @@
 <body>
     <!-- HTML da aula -->
     <h3>Lista de Tarefas (Array)</h3>
+    <input type="text" id="tarefas" placeholder="Digite uma tarefa">
+    <button id="btnAdd">Adicionar</button>
 
+    <ul id="listaTarefas">
+
+    </ul>
 
     <script>
         //CÓDIGO JS DO DESAFIO
-       
+        let tarefas = [];
+        const inputAdd = document.getElementById('tarefas');
+        const lista = document.getElementById('listaTarefas');
+        document.getElementById('btnAdd').addEventListener('click', adicionarLista)
+
+        function renderizar() {
+            //lista.innerHTML = ""; // 1. Limpa tudo
+            // 2. Reconstrói baseado nos dados
+            tarefas.forEach(tarefa => {
+                lista.innerHTML += `<li>${tarefa}</li>`;
+            });
+        }
+
+        function adicionarLista() {
+            tarefas.push(inputAdd.value)
+            renderizar()
+            inputAdd.value = ''
+            console.log(tarefas)
+        }
     </script>
 
 </body>
