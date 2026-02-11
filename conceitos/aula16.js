@@ -1,35 +1,59 @@
-// aula16-conceito.js
+// ---------------------------------------------------------------
+// Aula 16 – Arrays de Objetos (Mudança de Paradigma)
+// ---------------------------------------------------------------
 
-// ----------------------------------------
-// 1. O Problema do innerHTML +=
-// ----------------------------------------
-// Ficar remendando HTML é ruim. Vamos focar nos DADOS.
+// 📚 CONCEITO 1: O HTML é Burro, o Array é Inteligente
+// ---------------------------------------------------------------
+// Até agora, confiávamos no HTML para guardar a informação. Isso é frágil.
+// Se atualizarmos a página, tudo some. Se precisarmos somar, é difícil ler do HTML.
+// A Solução: Guardar tudo em variáveis na memória (Array).
 
-// ----------------------------------------
-// 2. Array de Objetos (Fonte da Verdade)
-// ----------------------------------------
-let listaDeConvidados = [
-    { nome: "Paula", vip: true },
-    { nome: "João", vip: false }
-];
+// O Array vira a "Fonte da Verdade". O HTML vira apenas um "Espelho".
 
-// ----------------------------------------
-// 3. Renderização (Loop)
-// ----------------------------------------
-// Função que limpa a tela e desenha tudo baseada no Array.
+
+// 📚 CONCEITO 2: Objetos Literais (Agrupando Dados)
+// ---------------------------------------------------------------
+// Em vez de ter um array só de nomes e outro só de preços, criamos objetos.
+// É como uma ficha de cadastro.
+
+const transacao = {
+    id: 12345,        // Identificador único
+    descricao: "Luz", // O quê?
+    valor: -100       // Quanto?
+};
+
+let listaTransacoes = []; // Nosso banco de dados local
+listaTransacoes.push(transacao);
+
+
+// 📚 CONCEITO 3: O Loop de Renderização (Apaga e Desenha)
+// ---------------------------------------------------------------
+// Para mostrar os dados na tela, usamos uma técnica poderosa:
+// 1. Apagamos a lista HTML inteira (innerHTML = "").
+// 2. Percorremos o Array item por item.
+// 3. Recriamos o HTML de cada item.
+
+// Por que apagar tudo?
+// Para evitar duplicidade. Se não apagarmos, ao adicionar o item 5,
+// ele mostraria: 1, 2, 3, 4, 1, 2, 3, 4, 5.
+
 function renderizar() {
-    const lista = document.getElementById("lista");
-    lista.innerHTML = ""; // 1. Limpa tudo
+    const ul = document.getElementById("lista");
+    ul.innerHTML = ""; // Limpeza da lousa
 
-    // 2. Reconstrói baseado nos dados
-    listaDeConvidados.forEach(pessoa => {
-        lista.innerHTML += `<li>${pessoa.nome}</li>`;
+    listaTransacoes.forEach(item => {
+        // Recriação baseada nos dados
+        ul.innerHTML += `<li>${item.descricao}: R$ ${item.valor}</li>`;
     });
 }
 
-// ----------------------------------------
-// 🏋️ MINI-DESAFIO (20 min) - "Lista de Tarefas Simples"
-// ----------------------------------------
+
+// ---------------------------------------------------------------
+// 🏋️ MINI-DESAFIO - "Lista de Tarefas (Array)"
+// ---------------------------------------------------------------
+// Objetivo: Criar uma lista onde os dados ficam salvos num array.
+
 // 1. Crie um array vazio `tarefas = []`.
-// 2. Input + Botão. Ao clicar, dá .push() no array (guardando só o texto).
-// 3. Chame uma função `renderizar()` que limpa a <ul> e faz um forEach para mostrar os itens.
+// 2. Ao clicar em "Adicionar", dê um `.push()` do texto do input no array.
+// 3. Chame a função `renderizar()`.
+// 4. A função `renderizar()` deve limpar a <ul> e fazer um loop `forEach` no array para desenhar as `<li>`.
