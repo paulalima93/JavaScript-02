@@ -60,10 +60,34 @@
 <body>
     <!-- HTML da aula -->
 
+    <ul id="emails">
 
+    </ul>
     <script>
-    //CÓDIGO JS DO DESAFIO
-        
+        const listaEmails= document.getElementById('emails')
+        //CÓDIGO JS DO DESAFIO
+        let emails = [
+            { id: 1, msg: "Oi sumida" },
+            { id: 2, msg: "Ganhe dinheiro fácil" },
+            { id: 3, msg: "Trabalho" }];
+
+        function renderizar(){
+            listaEmails.innerHTML = ""
+
+            emails.forEach (email => {
+                listaEmails.innerHTML += `
+                ${email.msg}
+                <button onclick='apagar(${email.id})'>x</button><br>
+                 `
+            })
+        }
+
+        function apagar(id){
+            emails = emails.filter(email => email.id !== id);
+            renderizar();
+        }
+
+        renderizar()
     </script>
 
 </body>
