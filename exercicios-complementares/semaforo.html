@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio 04 - Semáforo Inteligente</title>
+    <style>
+        body { font-family: sans-serif; background: #2d3436; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .semaforo { background: #333; padding: 20px; border-radius: 50px; display: flex; flex-direction: column; gap: 15px; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+        .luz { width: 80px; height: 80px; border-radius: 50%; background: #444; transition: 0.3s; border: 4px solid #222; }
+        
+        /* Classes que ela deverá aplicar via JS */
+        .vermelho { background: #ff7675; box-shadow: 0 0 20px #d63031; }
+        .amarelo { background: #fdcb6e; box-shadow: 0 0 20px #e1b12c; }
+        .verde { background: #55efc4; box-shadow: 0 0 20px #00b894; }
+
+        button { margin-top: 30px; padding: 15px 30px; border-radius: 30px; border: none; background: #0984e3; color: white; font-weight: bold; cursor: pointer; font-size: 1rem; }
+        button:hover { background: #74b9ff; }
+    </style>
+</head>
+<body>
+
+    <div class="semaforo">
+        <div id="luz-vermelha" class="luz"></div>
+        <div id="luz-amarela" class="luz"></div>
+        <div id="luz-verde" class="luz"></div>
+    </div>
+
+    <button id="btnMudar">Mudar Sinal</button>
+
+    <script>
+        // --- IMPLEMENTAR LÓGICA AQUI ---
+        // 1. Selecionar as 3 luzes e o botão
+        // 2. Criar uma variável de controle (ex: let estado = 0)
+        // 3. Ao clicar, remover as classes de todas e adicionar na correta
+
+       
+    </script>
+</body>
+</html>

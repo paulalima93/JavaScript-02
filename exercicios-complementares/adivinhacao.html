@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio 01 - Adivinhação com Histórico</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #e0e7ff; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .container { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); text-align: center; width: 320px; border-top: 5px solid #4f46e5; }
+        input { width: 80%; padding: 10px; margin: 15px 0; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; }
+        button { background: #4f46e5; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; width: 100%; }
+        button:hover { background: #4338ca; }
+        #mensagem { margin-top: 20px; font-weight: bold; color: #374151; }
+        .tentativas-box { margin-top: 15px; padding: 10px; background: #f3f4f6; border-radius: 8px; font-size: 0.9rem; color: #6b7280; }
+        #listaTentativas { word-wrap: break-word; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🔥 Quente ou Frio</h2>
+        <p>Tente adivinhar o número secreto entre 1 e 100!</p>
+        <input type="number" id="palpite" placeholder="Seu palpite...">
+        <button id="btnChutar">Chutar!</button>
+        
+        <p id="mensagem">Boa sorte!</p>
+
+        <div class="tentativas-box">
+            Tentativas: <span id="listaTentativas">Nenhuma ainda</span>
+        </div>
+    </div>
+
+    <script>
+        // --- IMPLEMENTAR LÓGICA AQUI ---
+        // Dica para a aluna: Crie um array vazio para armazenar os chutes
+        // e use .join(', ') para mostrar na tela.
+
+        
+    </script>
+</body>
+</html>

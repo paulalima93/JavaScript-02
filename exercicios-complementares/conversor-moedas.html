@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio 05 - Conversor</title>
+    <style>
+        body { font-family: sans-serif; background: #ecfdf5; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .box { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 15px rgba(0,0,0,0.05); text-align: center; border: 2px solid #10b981; }
+        input { padding: 12px; font-size: 1.2rem; width: 150px; border-radius: 10px; border: 1px solid #ccc; margin: 10px; }
+        #resultado { font-size: 2rem; color: #065f46; font-weight: bold; margin-top: 20px; }
+        .label-moeda { font-weight: bold; color: #059669; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>💰 Conversor de Moeda</h2>
+        <div>
+            <span class="label-moeda">R$</span>
+            <input type="number" id="valorReal" placeholder="0,00">
+        </div>
+        <button id="btnConverter" style="padding: 10px 20px; border-radius: 8px; background: #10b981; color: white; border: none; cursor: pointer;">Converter para US$</button>
+        <div id="resultado">US$ 0,00</div>
+    </div>
+
+    <script>
+        // --- IMPLEMENTAR LÓGICA AQUI ---
+        // Dica: Use uma cotação fixa de 5.00 e o método .toFixed(2) ou Intl.NumberFormat
+        
+    </script>
+</body>
+</html>
