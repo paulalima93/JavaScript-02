@@ -59,3 +59,4 @@ function filtrarLista(tipo) {
 // 3. No HTML, use onclick="filtrar('tudo')" e onclick="filtrar('azul')".
 // 4. No JS, crie a função `filtrar(corSolicitada)`.
 // 5. Se a cor for 'tudo', desenhe a lista inteira. Se for 'azul', filtre e desenhe só os azuis.
+

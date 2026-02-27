@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Área de Testes - Mini Desafios - 17</title>
+    <title>Área de Testes - Mini Desafios - 18</title>
     <style>
         body {
             font-family: sans-serif;
@@ -59,9 +59,33 @@
 
 <body>
     <!-- HTML da aula -->
+    <button id="verTudo" onclick="filtrar('tudo')">Ver tudo</button>
+    <button id="soAzul" onclick="filtrar('azul')">Só azul</button>
 
+    <ul id="lista">
+
+    </ul>
     <script>
+        const listaRef= document.getElementById('lista');
+        const roupas = [{peca: "Camisa", cor: "azul"}, {peca: "Calça", cor: "preta"}, {peca: "Boné", cor: "azul"}];
 
+        function filtrar(corSolicitada){
+            if(corSolicitada === 'azul'){
+                let listaProvisoria = roupas.filter(roupa => roupa.cor === corSolicitada);
+                renderizar(listaProvisoria)
+            }else{
+                renderizar(roupas)
+            }
+        }
+
+        function renderizar(lista) {
+            listaRef.innerHTML = ""; // 1. Limpa tudo
+            // 2. Reconstrói baseado nos dados
+            lista.forEach(roupa => {
+                listaRef.innerHTML += `<li>${roupa.peca}- ${roupa.cor}</li>`;
+            });
+        }
+        renderizar(roupas)
     </script>
 
 </body>
