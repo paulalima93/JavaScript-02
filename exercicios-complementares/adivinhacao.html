@@ -30,6 +30,28 @@
 
     <script>
         // --- IMPLEMENTAR LÓGICA AQUI ---
+            let deducoes = [];
+            const buttonChute = document.getElementById('btnChutar');
+            const inputPalpite = document.getElementById('palpite');
+            const listaTentativas = document.getElementById('listaTentativas');
+            const numeroSecreto = 8;
+
+            function deducao() {
+                let valorDigitado = Number(inputPalpite.value);
+                deducoes.push(valorDigitado);
+                listaTentativas.textContent = deducoes.join(", ");
+
+                if (valorDigitado === numeroSecreto) {
+                    console.log('Acertou!!')
+                } else {
+                    console.log('Tente novamente!')
+                }
+
+                inputPalpite.value = "";
+
+            }
+
+        buttonChute.addEventListener('click', deducao);
         // Dica: Crie um array vazio para armazenar os chutes
         // e use .join(', ') para mostrar na tela.
 

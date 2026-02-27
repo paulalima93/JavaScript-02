@@ -23,8 +23,30 @@
     </div>
 
     <script>
-        // --- IMPLEMENTAR LÓGICA AQUI ---
-        // Dica: Use uma cotação fixa de 5.00 e o método .toFixed(2) ou Intl.NumberFormat
+                const inputValor = document.getElementById("valorReal");
+                const botaoConverter = document.getElementById("btnConverter");
+                const resultado = document.getElementById("resultado");
+
+                const cotacao = 5.00;
+
+                function converter() {
+                    let valor = Number(inputValor.value);
+                    let valorConvertido = valor / cotacao;
+
+                    if(!valor || valor <=0){
+                        resultado.textContent = "US$ 0,00"
+                    }
+
+                    let formatado = new intl.NumberFormat("en-US", {
+                        style: "currency",
+                        currency: "USD",
+                    }).format(ValoConvertido);
+
+                    resultado.textContent = formatado;
+                    
+                }
+
+                botaoConverter.addEventListener("click", converter);
         
     </script>
 </body>
