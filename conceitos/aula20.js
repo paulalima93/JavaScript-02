@@ -26,10 +26,10 @@ const formatadorMoeda = new Intl.NumberFormat('pt-BR', {
 });
 
 // 2. Usando a máquina:
-const numeroCru = 1250.5;
+const numeroCru = 12341250.5;
 const numeroLindo = formatadorMoeda.format(numeroCru);
 
-// console.log(numeroLindo); // Saída exata: R$ 1.250,50
+console.log(numeroLindo); // Saída exata: R$ 1.250,50
 
 
 // 🎓 CONCEITO EXTRA: Por que focar nos Fundamentos? 
